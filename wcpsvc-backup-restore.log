@@ -1,0 +1,11 @@
+2023-06-21T18:05:44 [14285][MainThread]INFO:wcp_backup_restore:Initiating wcp restore
+2023-06-21T18:05:44 [14285][MainThread]INFO:wcp_backup_restore:Restore complete
+2023-06-21T18:05:44 [14285][MainThread]INFO:wcp_backup_restore:Created the restore marker file /storage/lifecycle/vmware-wcp/restore/wcpsvc-restore-marker
+2023-06-21T18:42:20 [1138][MainThread]INFO:wcp_backup_restore:Initiating wcp backup
+2023-06-21T18:42:20 [1138][MainThread]INFO:wcp_backup_restore:Port found: 443
+2023-06-21T18:42:21 [1138][MainThread]DEBUG:wcp_backup_restore:Skipped etcd backup, which is only supported in VMC setup for now
+2023-06-21T18:42:21 [1138][MainThread]INFO:wcp_backup_restore:Backup complete
+2023-09-28T21:26:11 [80647][MainThread]INFO:wcp_backup_restore:Initiating wcp backup
+2023-09-28T21:26:12 [80647][MainThread]INFO:wcp_backup_restore:Port found: 443
+2023-09-28T21:26:17 [80647][MainThread]DEBUG:wcp_backup_restore:Skipped etcd backup, which is only supported in VMC setup for now
+2023-09-28T21:26:17 [80647][MainThread]INFO:wcp_backup_restore:Backup complete

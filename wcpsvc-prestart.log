@@ -1,0 +1,730 @@
+2023-06-21 18:12:50,363 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-06-21 18:12:50,518 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-06-21 18:13:04,132 root INFO - Adding SSO groups for NSX
+2023-06-21 18:13:04,325 root INFO - Adding SSO Group for NSX - NsxAdministrators
+2023-06-21 18:13:05,933 root INFO - Adding SSO Group for NSX - NsxViAdministrators
+2023-06-21 18:13:07,196 root INFO - Adding SSO Group for NSX - NsxAuditors
+2023-06-21 18:13:11,355 root INFO - SSO user "wcp" already exists
+2023-06-21 18:13:15,681 root INFO - Certificate has 3205 days to expire.
+2023-06-21 18:13:17,596 root INFO - Adding "wcp" solution user to "ActAsUsers" group.
+2023-06-21 18:13:19,860 root INFO - Adding "wcp" solution user to "NsxAdministrators" group.
+2023-06-21 18:13:20,457 root INFO - Read privilege granted for user wcp to VECS store vpxd-extension
+2023-06-21 18:13:20,977 root INFO - Read privilege granted for user wcp to VECS store wcp
+2023-06-21 18:13:22,299 root INFO - WCP storage user exists
+2023-06-21 18:13:39,622 root INFO - Configuring DB for WCP service
+2023-06-21 18:13:42,029 root INFO - Storing rhttpproxy port
+2023-06-21 18:13:42,098 roles_groups_users_utils DEBUG - Connecting to Lookup Service, url=https://vcenter-01.vmw.lab:443/lookupservice/sdk
+2023-06-21 18:13:42,682 roles_groups_users_utils DEBUG - Logging into SSO AdminClient as machine solution user, url=https://vcenter-01.vmw.lab/sts/STSService/vsphere.local
+2023-06-21 18:13:43,155 roles_groups_users_utils DEBUG - Connecting to Authz, url=https://vcenter-01.vmw.lab:443/invsvc/vmomi/sdk
+2023-06-21 18:13:43,155 roles_groups_users_utils DEBUG - Successfully initialized AuthzClient
+2023-06-21 18:13:43,299 roles_groups_users_utils DEBUG - Ensuring privileges exist: [(dataservice.accesscontrol.Privilege) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   id = 'Namespaces.SelfServiceManage',
+   description = '',
+   group = 'Namespaces',
+   version = 0,
+   isOnParent = false
+}]
+2023-06-21 18:13:47,492 roles_groups_users_utils INFO - Successfully updated wcp privileges: [(dataservice.accesscontrol.Privilege) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   id = 'Namespaces.SelfServiceManage',
+   description = '',
+   group = 'Namespaces',
+   version = 0,
+   isOnParent = false
+}]
+2023-06-21 18:13:47,496 roles_groups_users_utils DEBUG - Ensuring roles exist: [{'id': '1023', 'name': 'NSOperatorController', 'description': 'This role entitles the Namespace SelfService Operator to create and configure namespaces.', 'priv_ids': ['Namespaces.Configure']}]
+2023-06-21 18:13:47,515 roles_groups_users_utils INFO - Successfully loaded authz roles, added 0 new roles
+2023-06-21 18:13:47,527 roles_groups_users_utils DEBUG - Ensuring roles exist: [{'id': '1025', 'name': 'NetOperatorController', 'description': 'This role entitles the Netoperator controller to get and mutate network settings.', 'priv_ids': ['Network.Assign']}]
+2023-06-21 18:13:47,548 roles_groups_users_utils INFO - Successfully loaded authz roles, added 0 new roles
+2023-06-21 18:13:47,559 roles_groups_users_utils DEBUG - Ensuring roles exist: [{'id': '1026', 'name': 'PodVmLifeCycleManager', 'description': 'This role entitles the permission required by PodVM LCM controller to be granted in the datacenter.', 'priv_ids': ['Network.Assign', 'Resource.AssignVMToPool', 'System.Read', 'System.Anonymous', 'System.View', 'VirtualMachine.Config.AddExistingDisk', 'VirtualMachine.Config.AddNewDisk', 'VirtualMachine.Config.AddRemoveDevice', 'VirtualMachine.Config.RemoveDisk', 'VirtualMachine.Config.Settings', 'VirtualMachine.Inventory.Create', 'VirtualMachine.Inventory.Delete', 'Datastore.AllocateSpace', 'Datastore.FileManagement', 'StorageProfile.View', 'EAM.Modify', 'Cns.Searchable', 'Resource.ColdMigrate', 'Host.Config.Storage']}]
+2023-06-21 18:13:47,591 roles_groups_users_utils INFO - Successfully loaded authz roles, added 0 new roles
+2023-06-21 18:13:47,594 roles_groups_users_utils DEBUG - Ensuring privileges exist: [(dataservice.accesscontrol.Privilege) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   id = 'Namespaces.ListAccess',
+   description = '',
+   group = 'Namespaces',
+   version = 0,
+   isOnParent = false
+}]
+2023-06-21 18:13:47,672 roles_groups_users_utils INFO - Successfully updated wcp privileges: [(dataservice.accesscontrol.Privilege) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   id = 'Namespaces.ListAccess',
+   description = '',
+   group = 'Namespaces',
+   version = 0,
+   isOnParent = false
+}]
+2023-06-21 18:13:47,691 roles_groups_users_utils DEBUG - Ensuring roles exist: [{'id': '1027', 'name': 'NamespacesQueryRole', 'description': 'This role allows vSphere user to list namespaces any user or group has access to.', 'priv_ids': ['Namespaces.ListAccess']}]
+2023-06-21 18:13:47,794 roles_groups_users_utils INFO - Successfully loaded authz roles, added 0 new roles
+2023-06-21 18:13:50,149 vc_extension_utils INFO - Endpoint URL: http://localhost:8085/sdk
+2023-06-21 18:13:50,156 vc_extension_utils INFO - Endpoint URL: http://localhost:8085/sdk
+2023-06-21 18:13:51,592 vc_extension_utils INFO - Registering vSphere WCP extension
+2023-06-21 18:13:51,593 vc_extension_utils INFO - Creating vSphere WCP extension
+2023-06-21 18:13:51,910 vc_extension_utils DEBUG - (vim.Extension) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   description = (vim.Description) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      label = 'WCP Service',
+      summary = 'Workload Control Plane Service'
+   },
+   key = 'com.vmware.vcenter.wcp',
+   company = 'VMware Inc.',
+   type = <unset>,
+   version = '1.0.0',
+   subjectName = <unset>,
+   server = (vim.Extension.ServerInfo) [
+      (vim.Extension.ServerInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         url = 'https://*:443/namespace_management/rest',
+         description = (vim.Description) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            label = 'NAMESPACES REST API',
+            summary = 'Support bundle API'
+         },
+         company = 'VMware Inc.',
+         type = 'REST',
+         adminEmail = 'noreply@vmware.com',
+         serverThumbprint = <unset>,
+         serverCertificate = <unset>
+      },
+      (vim.Extension.ServerInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         url = 'https://*:443/namespace_management/rest',
+         description = (vim.Description) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            label = 'Skip LS registration',
+            summary = 'Skip LS registration'
+         },
+         company = 'VMware, Inc.',
+         type = 'cis.common.skipreg',
+         adminEmail = 'noreply@vmware.com',
+         serverThumbprint = <unset>,
+         serverCertificate = <unset>
+      }
+   ],
+   client = (vim.Extension.ClientInfo) [],
+   taskList = (vim.Extension.TaskTypeInfo) [
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.upgrade'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.node'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.node.ready'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.node.uninstall'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.node.entermm'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.node.resourcecheck'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.disk.enterdd'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.disk.exitdd'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.disk.diskdisabled'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.remove_master'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.service.register'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.service.delete'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.service.update'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.service.activate'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.service.deactivate'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.serviceversion.register'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.serviceversion.delete'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.serviceversion.activate'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.serviceversion.deactivate'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.clusterservice.create'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.clusterservice.delete'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.wcp.appplatform.clusterservice.set'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.cluster.enable'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.cluster.disable'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.host.configure'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.host.unconfigure'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.edgecluster.enable'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.edgecluster.disable'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.edgecluster.update'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.edgevm.configure'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.edgevm.unconfigure'
+      },
+      (vim.Extension.TaskTypeInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         taskID = 'com.vmware.vcenter.nsx.recovery'
+      }
+   ],
+   eventList = (vim.Extension.EventTypeInfo) [],
+   faultList = (vim.Extension.FaultTypeInfo) [],
+   privilegeList = (vim.Extension.PrivilegeInfo) [],
+   resourceList = (vim.Extension.ResourceInfo) [],
+   lastHeartbeatTime = 2023-06-21T18:13:51.822978Z,
+   healthInfo = <unset>,
+   ovfConsumerInfo = <unset>,
+   extendedProductInfo = <unset>,
+   managedEntityInfo = (vim.ext.ManagedEntityInfo) [
+      (vim.ext.ManagedEntityInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         type = 'VirtualMachine',
+         smallIconUrl = <unset>,
+         iconUrl = <unset>,
+         description = 'This is a virtual machine managed by components of vSphere Namespaces.'
+      }
+   ],
+   shownInSolutionManager = <unset>,
+   solutionManagerInfo = <unset>
+}
+2023-06-21 18:13:52,709 vc_extension_utils INFO - Success updating extension com.vmware.vcenter.wcp
+2023-06-21 18:13:52,739 root INFO - Configuring DB for HDCS
+2023-06-21 18:13:54,071 root INFO - Configuring DB Peer Auth for HDCS Service
+2023-06-21 18:14:03,852 root DEBUG - Returned stdout : , stderr: 2023-06-21 18:13:58,622 DEBUG : Initializing cache
+2023-06-21 18:13:58,623 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-06-21 18:13:58,682 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-06-21 18:13:58,682 DEBUG : File /etc/vmware/service-registry/wcp-sub-registry.yaml not in cache
+2023-06-21 18:13:58,683 DEBUG : Initializing the pool...
+2023-06-21 18:13:58,683 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:58,683 DEBUG : Opening connection: {'dbname': 'VCDB', 'user': 'postgres', 'host': '/var/run/vpostgres', 'port': 5432}
+2023-06-21 18:13:58,744 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:58,744 DEBUG : Found connection in pool
+2023-06-21 18:13:58,744 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:58,748 DEBUG : Found connection in pool
+2023-06-21 18:13:58,778 DEBUG : File(s) ['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+2023-06-21 18:13:58,778 DEBUG : Processing /etc/vmware/service-registry/wcp-sub-registry.yaml...
+2023-06-21 18:13:59,511 DEBUG : Looking for instance vpostgres
+2023-06-21 18:13:59,568 DEBUG : Filtering for all services
+2023-06-21 18:13:59,568 DEBUG : Service wcp has a dependency on role wcpuser
+2023-06-21 18:13:59,568 DEBUG : Service wcp has a dependency on role hdcsuser
+2023-06-21 18:13:59,568 DEBUG : Full list of role dependency found in /etc/vmware/service-registry/wcp-sub-registry.yaml: hdcsuser,wcpuser
+2023-06-21 18:13:59,568 DEBUG : Loading roles for instance vpostgres in /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-06-21 18:13:59,569 DEBUG : Configuration parameters for wcpuser are: {'search_path': 'wcp'}
+2023-06-21 18:13:59,569 DEBUG : Configuration parameters for hdcsuser are: {'search_path': 'hdcs'}
+2023-06-21 18:13:59,569 DEBUG : yaml roles in /etc/vmware/service-registry/wcp-sub-registry.yaml:
+{'wcpuser': <wcpuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<wcpuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>, 'hdcsuser': <hdcsuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<hdcsuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>}
+2023-06-21 18:13:59,569 DEBUG : Loading ownership for instance vpostgres in /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-06-21 18:13:59,569 DEBUG : Retrieve the schemas ownership from /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-06-21 18:13:59,569 DEBUG : No object is declared under schema wcp for role wcpuser
+2023-06-21 18:13:59,569 DEBUG : No object is declared under schema hdcs for role hdcsuser
+2023-06-21 18:13:59,569 DEBUG : All roles found in ['/etc/vmware/service-registry/wcp-sub-registry.yaml']: {'wcpuser': <wcpuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<wcpuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>, 'hdcsuser': <hdcsuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<hdcsuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>}
+2023-06-21 18:13:59,570 DEBUG : Generating diff to sync role between yaml and db...
+2023-06-21 18:13:59,570 DEBUG : Loading all roles from database...
+2023-06-21 18:13:59,617 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:59,618 DEBUG : Found connection in pool
+2023-06-21 18:13:59,657 DEBUG : Role vcgroup doesn't have LOGIN attribute, skipping  authentication retrieval
+2023-06-21 18:13:59,657 DEBUG : db roles:
+{'replicator': <replicator (), privileges=(), attributes=(LOGIN,REPLICATION,INHERIT), hba=[<replicator:>]>, 'trustmanagement_sync_db': <trustmanagement_sync_db (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<trustmanagement_sync_db:>]>, 'vc': <vc (), privileges=(vcgroup), attributes=(LOGIN,INHERIT), hba=[<vc:>]>, 'vcgroup': <vcgroup (), privileges=(), attributes=(INHERIT), hba=[<vcgroup:>]>, 'vcservices': <vcservices (), privileges=(vcgroup), attributes=(LOGIN,INHERIT), hba=[<vcservices:>]>, 'vidm_services_user': <vidm_services_user (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vidm_services_user:>]>, 'vlcmuser': <vlcmuser (), privileges=(pg_monitor), attributes=(LOGIN,INHERIT), hba=[<vlcmuser:>]>, 'vpxd': <vpxd (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vpxd:>]>, 'vpxd_svcs_computepolicy': <vpxd_svcs_computepolicy (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vpxd_svcs_computepolicy:>]>, 'vpxd_svcs_kv_store': <vpxd_svcs_kv_store (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vpxd_svcs_kv_store:>]>, 'vpxd_svcs_tagging': <vpxd_svcs_tagging (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vpxd_svcs_tagging:>]>, 'vsanhealth': <vsanhealth (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vsanhealth:>]>, 'vstatsuser': <vstatsuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vstatsuser:>]>, 'archiver': <archiver (), privileges=(), attributes=(LOGIN,REPLICATION,INHERIT), hba=[<archiver:>]>, 'certmgr_subscription': <certmgr_subscription (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<certmgr_subscription:>]>, 'certmgr_syncaas': <certmgr_syncaas (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<certmgr_syncaas:>]>, 'cls': <cls (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<cls:>]>, 'cns': <cns (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<cns:>]>, 'fcduser': <fcduser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<fcduser:>]>, 'hdcsuser': <hdcsuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<hdcsuser:>]>, 'hvc': <hvc (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<hvc:>]>, 'lookupsvc_sync_db': <lookupsvc_sync_db (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<lookupsvc_sync_db:>]>, 'observability': <observability (), privileges=(pg_read_all_stats), attributes=(LOGIN,INHERIT), hba=[<observability:>]>, 'perfchartsuser': <perfchartsuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<perfchartsuser:>]>, 'postgres': <postgres (), privileges=(), attributes=(LOGIN,SUPERUSER,REPLICATION,BYPASSRLS,CREATEDB,INHERIT,CREATEROLE), hba=[<postgres:>]>, 'vumuser': <vumuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<vumuser:>]>, 'wcpuser': <wcpuser (), privileges=(), attributes=(LOGIN,INHERIT), hba=[<wcpuser:>]>}
+2023-06-21 18:13:59,658 DEBUG : Diff sync done; will create: 0 role(s) - drop: 0 role(s) - modify: 2 role(s)
+2023-06-21 18:13:59,670 DEBUG : Working on authentication files...
+2023-06-21 18:13:59,672 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:59,674 DEBUG : Found connection in pool
+2023-06-21 18:13:59,696 DEBUG : db hba_file: /storage/db/vpostgres/pg_hba.conf
+2023-06-21 18:13:59,696 DEBUG : db ident_file: /storage/db/vpostgres/pg_ident.conf
+2023-06-21 18:13:59,696 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:59,696 DEBUG : Found connection in pool
+2023-06-21 18:13:59,706 DEBUG : Handle ownership in yaml
+2023-06-21 18:13:59,706 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:59,706 DEBUG : Found connection in pool
+2023-06-21 18:13:59,973 DEBUG : Getting connection on database VCDB
+2023-06-21 18:13:59,980 DEBUG : Found connection in pool
+2023-06-21 18:14:00,000 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:00,000 DEBUG : Found connection in pool
+2023-06-21 18:14:00,040 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:00,040 DEBUG : Found connection in pool
+2023-06-21 18:14:01,661 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:01,661 DEBUG : Found connection in pool
+2023-06-21 18:14:01,855 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:01,933 DEBUG : Found connection in pool
+2023-06-21 18:14:02,184 WARNING: Routine vidm_schema.citext(character) in database VCDB is overloaded by vidm_schema.citext(boolean)
+2023-06-21 18:14:02,232 WARNING: Routine vidm_schema.citext(character) in database VCDB is overloaded by vidm_schema.citext(inet)
+2023-06-21 18:14:02,276 WARNING: Routine vidm_schema.regexp_match(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_match(vidm_schema.citext,vidm_schema.citext,text)
+2023-06-21 18:14:02,276 WARNING: Routine vidm_schema.regexp_matches(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_matches(vidm_schema.citext,vidm_schema.citext,text)
+2023-06-21 18:14:02,300 WARNING: Routine vidm_schema.regexp_replace(vidm_schema.citext,vidm_schema.citext,text) in database VCDB is overloaded by vidm_schema.regexp_replace(vidm_schema.citext,vidm_schema.citext,text,text)
+2023-06-21 18:14:02,301 WARNING: Routine vidm_schema.regexp_split_to_array(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_split_to_array(vidm_schema.citext,vidm_schema.citext,text)
+2023-06-21 18:14:02,301 WARNING: Routine vidm_schema.regexp_split_to_table(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_split_to_table(vidm_schema.citext,vidm_schema.citext,text)
+2023-06-21 18:14:02,301 WARNING: Routine vidm_schema.texticlike(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.texticlike(vidm_schema.citext,text)
+2023-06-21 18:14:02,301 WARNING: Routine vidm_schema.texticnlike(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.texticnlike(vidm_schema.citext,text)
+2023-06-21 18:14:02,302 WARNING: Routine vidm_schema.texticregexeq(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.texticregexeq(vidm_schema.citext,text)
+2023-06-21 18:14:02,302 WARNING: Routine vidm_schema.texticregexne(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.texticregexne(vidm_schema.citext,text)
+2023-06-21 18:14:02,436 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:02,447 DEBUG : Found connection in pool
+2023-06-21 18:14:02,453 DEBUG : Found tablespace alarm ([None]) in DB
+2023-06-21 18:14:02,453 DEBUG : Found tablespace event ([None]) in DB
+2023-06-21 18:14:02,464 DEBUG : Found tablespace hs1 ([None]) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace hs2 ([None]) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace hs3 ([None]) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace hs4 (['CREATE']) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace hs4 (['CREATE']) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace pg_default ([None]) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace pg_global ([None]) in DB
+2023-06-21 18:14:02,465 DEBUG : Found tablespace task ([None]) in DB
+2023-06-21 18:14:02,466 DEBUG : Processing queries...
+2023-06-21 18:14:02,466 DEBUG : Number of queries for shared objects: 0
+2023-06-21 18:14:02,466 DEBUG : Number of queries for db objects: 8
+2023-06-21 18:14:02,466 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:02,466 DEBUG : Found connection in pool
+2023-06-21 18:14:02,547 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:02,547 DEBUG : Found connection in pool
+2023-06-21 18:14:02,674 DEBUG : COMMIT on all pooled database...
+2023-06-21 18:14:02,674 DEBUG : COMMIT on all pooled database - VCDB...
+2023-06-21 18:14:02,688 DEBUG : Acquiring lock /storage/db/vpostgres/postgresql.conf.upgradeLock
+2023-06-21 18:14:02,701 DEBUG : Backuping hba_file (/storage/db/vpostgres/pg_hba.conf) in /storage/db/vpostgres/pg_hba.conf.backup
+2023-06-21 18:14:02,764 DEBUG : Backuping ident_file (/storage/db/vpostgres/pg_ident.conf) in /storage/db/vpostgres/pg_ident.conf.backup
+2023-06-21 18:14:02,806 DEBUG : Working on hba_file
+2023-06-21 18:14:02,832 DEBUG : Keeping extra hba entries for role vstatsuser
+2023-06-21 18:14:02,837 DEBUG : Keeping extra hba entries for role archiver
+2023-06-21 18:14:02,838 DEBUG : Keeping extra hba entries for role lookupsvc_sync_db
+2023-06-21 18:14:02,844 DEBUG : Keeping extra hba entries for role vpxd_svcs_computepolicy
+2023-06-21 18:14:02,844 DEBUG : Keeping extra hba entries for role vpxd_svcs_kv_store
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role vpxd_svcs_tagging
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role vpxd
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role observability
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role trustmanagement_sync_db
+2023-06-21 18:14:02,845 DEBUG : Syncing hba entries for role hdcsuser
+2023-06-21 18:14:02,845 DEBUG : Syncing hba entries for role wcpuser
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role cls
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role fcduser
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role vlcmuser
+2023-06-21 18:14:02,845 DEBUG : Keeping extra hba entries for role vsanhealth
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role cns
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role perfchartsuser
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role vumuser
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role certmgr_syncaas
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role certmgr_subscription
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role hvc
+2023-06-21 18:14:02,846 DEBUG : Keeping extra hba entries for role all
+2023-06-21 18:14:02,846 DEBUG : Overwriting /storage/db/vpostgres/pg_hba.conf...
+2023-06-21 18:14:02,925 DEBUG : Working on ident_file
+2023-06-21 18:14:02,926 DEBUG : Keeping extra ident entries for role archiver
+2023-06-21 18:14:02,926 DEBUG : Keeping extra ident entries for role certmgr_subscription
+2023-06-21 18:14:02,926 DEBUG : Keeping extra ident entries for role certmgr_syncaas
+2023-06-21 18:14:02,926 DEBUG : Keeping extra ident entries for role cls
+2023-06-21 18:14:02,926 DEBUG : Keeping extra ident entries for role cns
+2023-06-21 18:14:02,926 DEBUG : Keeping extra ident entries for role fcduser
+2023-06-21 18:14:02,948 DEBUG : Keeping extra ident entries for role hvc
+2023-06-21 18:14:02,948 DEBUG : Keeping extra ident entries for role lookupsvc_sync_db
+2023-06-21 18:14:02,948 DEBUG : Keeping extra ident entries for role perfchartsuser
+2023-06-21 18:14:02,948 DEBUG : Keeping extra ident entries for role trustmanagement_sync_db
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vlcmuser
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vpxd
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vpxd_svcs_computepolicy
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vpxd_svcs_kv_store
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vpxd_svcs_tagging
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vsanhealth
+2023-06-21 18:14:02,949 DEBUG : Keeping extra ident entries for role vumuser
+2023-06-21 18:14:02,950 DEBUG : Adding ident entries for missing role hdcsuser
+2023-06-21 18:14:02,950 DEBUG : Adding ident entries for missing role wcpuser
+2023-06-21 18:14:02,950 DEBUG : Overwriting /storage/db/vpostgres/pg_ident.conf...
+2023-06-21 18:14:03,036 DEBUG : Reloading postgres configuration
+2023-06-21 18:14:03,036 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:03,036 DEBUG : Found connection in pool
+2023-06-21 18:14:03,061 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:03,062 DEBUG : Found connection in pool
+2023-06-21 18:14:03,103 DEBUG : Removing Backup of hba_file in /storage/db/vpostgres/pg_hba.conf.backup
+2023-06-21 18:14:03,104 DEBUG : Removing Backup of ident_file in /storage/db/vpostgres/pg_ident.conf.backup
+2023-06-21 18:14:03,111 DEBUG : Releasing lock /storage/db/vpostgres/postgresql.conf.upgradeLock
+2023-06-21 18:14:03,116 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:03,116 DEBUG : Found connection in pool
+2023-06-21 18:14:03,136 DEBUG : Getting connection on database VCDB
+2023-06-21 18:14:03,136 DEBUG : Found connection in pool
+2023-06-21 18:14:03,167 DEBUG : Checking if /etc/vmware/service-registry/wcp-sub-registry.yaml is cacheable
+2023-06-21 18:14:03,167 DEBUG : '/etc/vmware/service-registry/wcp-sub-registry.yaml' is cacheable
+2023-06-21 18:14:03,167 DEBUG : Updating cache.
+Files:
+{'/etc/vmware/service-registry/wcp-sub-registry.yaml'}
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-06-21 18:14:03,167 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-06-21 18:14:03,174 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: ae0950f48bece863d3b9a923fa99ab918df529a1
+2023-06-21 18:14:03,200 DEBUG : Shutting down the pool...
+
+2023-06-21 18:14:03,923 root INFO - Successfully granted permissions over VCDB table for hdcs role
+2023-06-21 18:14:03,923 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-06-21 18:14:03,923 root INFO - Going to create vCLSAdmin SSO Group
+2023-06-21 18:14:04,903 root INFO - vCLSAdmin SSO Group already exists
+2023-06-21 18:37:05,368 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-06-21 18:37:05,566 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-06-21 18:37:18,547 root INFO - Configuring DB for HDCS
+2023-06-21 18:37:19,599 root INFO - Configuring DB Peer Auth for HDCS Service
+2023-06-21 18:37:31,081 root DEBUG - Returned stdout : , stderr: 2023-06-21 18:37:30,494 DEBUG : Initializing cache
+2023-06-21 18:37:30,495 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-06-21 18:37:30,495 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-06-21 18:37:30,532 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-06-21 18:37:30,533 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: ae0950f48bece863d3b9a923fa99ab918df529a1
+2023-06-21 18:37:30,533 DEBUG : All stages for all files cached
+
+2023-06-21 18:37:31,082 root INFO - Successfully granted permissions over VCDB table for hdcs role
+2023-06-21 18:37:31,082 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-06-21 18:37:31,082 root INFO - Going to create vCLSAdmin SSO Group
+2023-06-21 18:37:32,042 root INFO - vCLSAdmin SSO Group already exists
+2023-09-28 18:00:26,913 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-09-28 18:00:27,035 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-09-28 18:00:44,012 root INFO - Configuring DB for HDCS
+2023-09-28 18:00:46,716 root INFO - Configuring DB Peer Auth for HDCS Service
+2023-09-28 18:00:52,118 root DEBUG - Returned stdout : , stderr: 2023-09-28 18:00:51,790 DEBUG : Initializing cache
+2023-09-28 18:00:51,790 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-09-28 18:00:51,832 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-09-28 18:00:51,832 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-28 18:00:51,839 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: ae0950f48bece863d3b9a923fa99ab918df529a1
+2023-09-28 18:00:51,840 DEBUG : All stages for all files cached
+
+2023-09-28 18:00:52,142 root INFO - Successfully granted permissions over VCDB table for hdcs role
+2023-09-28 18:00:52,142 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-09-28 18:00:52,142 root INFO - Going to create vCLSAdmin SSO Group
+2023-09-28 18:00:53,136 root INFO - vCLSAdmin SSO Group already exists
+2023-09-28 19:50:58,389 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-09-28 19:50:58,964 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-09-28 19:50:59,725 root INFO - Configuring VCDB for ['wcp', 'hdcs']
+2023-09-28 19:50:59,927 root INFO - Create wcp schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/wcp_db_init.sql -v ON_ERROR_STOP=1
+2023-09-28 19:51:00,080 root INFO - Create hdcs schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/hdcs_db_init.sql -v ON_ERROR_STOP=1
+2023-09-28 19:51:00,239 root INFO - Configuring DB Peer Auth for WCP/HDCS Service
+2023-09-28 19:51:01,527 root DEBUG - Returned stdout : , stderr: 2023-09-28 19:51:00,662 DEBUG : Initializing cache
+2023-09-28 19:51:00,662 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-09-28 19:51:00,663 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-09-28 19:51:00,663 DEBUG : File /etc/vmware/service-registry/wcp-sub-registry.yaml not in cache
+2023-09-28 19:51:00,663 DEBUG : Initializing the pool...
+2023-09-28 19:51:00,663 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,663 DEBUG : Opening connection: {'dbname': 'VCDB', 'user': 'postgres', 'host': '/var/run/vpostgres', 'port': 5432}
+2023-09-28 19:51:00,694 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,694 DEBUG : Found connection in pool
+2023-09-28 19:51:00,694 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,694 DEBUG : Found connection in pool
+2023-09-28 19:51:00,697 DEBUG : File(s) ['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+2023-09-28 19:51:00,697 DEBUG : Processing /etc/vmware/service-registry/wcp-sub-registry.yaml...
+2023-09-28 19:51:00,728 DEBUG : Looking for instance vpostgres
+2023-09-28 19:51:00,728 DEBUG : Filtering for all services
+2023-09-28 19:51:00,728 DEBUG : Service wcp has a dependency on role wcpuser
+2023-09-28 19:51:00,728 DEBUG : Service wcp has a dependency on role hdcsuser
+2023-09-28 19:51:00,728 DEBUG : Full list of role dependency found in /etc/vmware/service-registry/wcp-sub-registry.yaml: hdcsuser,wcpuser
+2023-09-28 19:51:00,728 DEBUG : Loading roles for instance vpostgres in /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-28 19:51:00,728 DEBUG : Configuration parameters for wcpuser are: {'search_path': 'wcp'}
+2023-09-28 19:51:00,729 DEBUG : Configuration parameters for hdcsuser are: {'search_path': 'hdcs'}
+2023-09-28 19:51:00,729 DEBUG : yaml roles in /etc/vmware/service-registry/wcp-sub-registry.yaml:
+{'wcpuser': <wcpuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<wcpuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>, 'hdcsuser': <hdcsuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<hdcsuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>}
+2023-09-28 19:51:00,729 DEBUG : Loading ownership for instance vpostgres in /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-28 19:51:00,729 DEBUG : Retrieve the schemas ownership from /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-28 19:51:00,729 DEBUG : No object is declared under schema wcp for role wcpuser
+2023-09-28 19:51:00,729 DEBUG : No object is declared under schema hdcs for role hdcsuser
+2023-09-28 19:51:00,730 DEBUG : All roles found in ['/etc/vmware/service-registry/wcp-sub-registry.yaml']: {'wcpuser': <wcpuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<wcpuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>, 'hdcsuser': <hdcsuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<hdcsuser:HbaEntryKey(conn_type='local', dbname='VCDB', host=None): {'auth_method': 'peer', 'auth_options': ['map=vcdb']}>]>}
+2023-09-28 19:51:00,730 DEBUG : Generating diff to sync role between yaml and db...
+2023-09-28 19:51:00,730 DEBUG : Loading all roles from database...
+2023-09-28 19:51:00,730 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,730 DEBUG : Found connection in pool
+2023-09-28 19:51:00,737 DEBUG : Role vcgroup doesn't have LOGIN attribute, skipping  authentication retrieval
+2023-09-28 19:51:00,738 DEBUG : db roles:
+{'archiver': <archiver (), privileges=(), attributes=(REPLICATION,INHERIT,LOGIN), hba=[<archiver:>]>, 'certmgr_subscription': <certmgr_subscription (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<certmgr_subscription:>]>, 'certmgr_syncaas': <certmgr_syncaas (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<certmgr_syncaas:>]>, 'cls': <cls (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<cls:>]>, 'cns': <cns (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<cns:>]>, 'fcduser': <fcduser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<fcduser:>]>, 'hdcsuser': <hdcsuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<hdcsuser:>]>, 'hvc': <hvc (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<hvc:>]>, 'lookupsvc_sync_db': <lookupsvc_sync_db (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<lookupsvc_sync_db:>]>, 'observability': <observability (), privileges=(pg_read_all_stats), attributes=(INHERIT,LOGIN), hba=[<observability:>]>, 'perfchartsuser': <perfchartsuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<perfchartsuser:>]>, 'trustmanagement_sync_db': <trustmanagement_sync_db (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<trustmanagement_sync_db:>]>, 'vc': <vc (), privileges=(vcgroup), attributes=(INHERIT,LOGIN), hba=[<vc:>]>, 'vcgroup': <vcgroup (), privileges=(), attributes=(INHERIT), hba=[<vcgroup:>]>, 'vcservices': <vcservices (), privileges=(vcgroup), attributes=(INHERIT,LOGIN), hba=[<vcservices:>]>, 'vidm_services_user': <vidm_services_user (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vidm_services_user:>]>, 'vlcmuser': <vlcmuser (), privileges=(pg_monitor), attributes=(INHERIT,LOGIN), hba=[<vlcmuser:>]>, 'vpxd': <vpxd (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vpxd:>]>, 'vpxd_svcs_computepolicy': <vpxd_svcs_computepolicy (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vpxd_svcs_computepolicy:>]>, 'vpxd_svcs_kv_store': <vpxd_svcs_kv_store (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vpxd_svcs_kv_store:>]>, 'vpxd_svcs_tagging': <vpxd_svcs_tagging (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vpxd_svcs_tagging:>]>, 'vsanhealth': <vsanhealth (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vsanhealth:>]>, 'vstatsuser': <vstatsuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vstatsuser:>]>, 'vumuser': <vumuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<vumuser:>]>, 'wcpuser': <wcpuser (), privileges=(), attributes=(INHERIT,LOGIN), hba=[<wcpuser:>]>, 'postgres': <postgres (), privileges=(), attributes=(SUPERUSER,CREATEROLE,CREATEDB,REPLICATION,BYPASSRLS,INHERIT,LOGIN), hba=[<postgres:>]>, 'replicator': <replicator (), privileges=(), attributes=(REPLICATION,INHERIT,LOGIN), hba=[<replicator:>]>}
+2023-09-28 19:51:00,738 DEBUG : Diff sync done; will create: 0 role(s) - drop: 0 role(s) - modify: 2 role(s)
+2023-09-28 19:51:00,738 DEBUG : Working on authentication files...
+2023-09-28 19:51:00,739 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,739 DEBUG : Found connection in pool
+2023-09-28 19:51:00,741 DEBUG : db hba_file: /storage/db/vpostgres/pg_hba.conf
+2023-09-28 19:51:00,742 DEBUG : db ident_file: /storage/db/vpostgres/pg_ident.conf
+2023-09-28 19:51:00,742 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,742 DEBUG : Found connection in pool
+2023-09-28 19:51:00,743 DEBUG : Handle ownership in yaml
+2023-09-28 19:51:00,743 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,743 DEBUG : Found connection in pool
+2023-09-28 19:51:00,782 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,782 DEBUG : Found connection in pool
+2023-09-28 19:51:00,785 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,786 DEBUG : Found connection in pool
+2023-09-28 19:51:00,789 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,789 DEBUG : Found connection in pool
+2023-09-28 19:51:00,945 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,946 DEBUG : Found connection in pool
+2023-09-28 19:51:00,968 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:00,968 DEBUG : Found connection in pool
+2023-09-28 19:51:00,997 WARNING: Routine vidm_schema.citext(boolean) in database VCDB is overloaded by vidm_schema.citext(character)
+2023-09-28 19:51:00,998 WARNING: Routine vidm_schema.citext(boolean) in database VCDB is overloaded by vidm_schema.citext(inet)
+2023-09-28 19:51:00,999 WARNING: Routine vidm_schema.regexp_match(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_match(vidm_schema.citext,vidm_schema.citext,text)
+2023-09-28 19:51:00,999 WARNING: Routine vidm_schema.regexp_matches(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_matches(vidm_schema.citext,vidm_schema.citext,text)
+2023-09-28 19:51:00,999 WARNING: Routine vidm_schema.regexp_replace(vidm_schema.citext,vidm_schema.citext,text) in database VCDB is overloaded by vidm_schema.regexp_replace(vidm_schema.citext,vidm_schema.citext,text,text)
+2023-09-28 19:51:00,999 WARNING: Routine vidm_schema.regexp_split_to_array(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_split_to_array(vidm_schema.citext,vidm_schema.citext,text)
+2023-09-28 19:51:01,004 WARNING: Routine vidm_schema.regexp_split_to_table(vidm_schema.citext,vidm_schema.citext) in database VCDB is overloaded by vidm_schema.regexp_split_to_table(vidm_schema.citext,vidm_schema.citext,text)
+2023-09-28 19:51:01,005 WARNING: Routine vidm_schema.texticlike(vidm_schema.citext,text) in database VCDB is overloaded by vidm_schema.texticlike(vidm_schema.citext,vidm_schema.citext)
+2023-09-28 19:51:01,005 WARNING: Routine vidm_schema.texticnlike(vidm_schema.citext,text) in database VCDB is overloaded by vidm_schema.texticnlike(vidm_schema.citext,vidm_schema.citext)
+2023-09-28 19:51:01,005 WARNING: Routine vidm_schema.texticregexeq(vidm_schema.citext,text) in database VCDB is overloaded by vidm_schema.texticregexeq(vidm_schema.citext,vidm_schema.citext)
+2023-09-28 19:51:01,005 WARNING: Routine vidm_schema.texticregexne(vidm_schema.citext,text) in database VCDB is overloaded by vidm_schema.texticregexne(vidm_schema.citext,vidm_schema.citext)
+2023-09-28 19:51:01,007 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,007 DEBUG : Found connection in pool
+2023-09-28 19:51:01,009 DEBUG : Found tablespace alarm ([None]) in DB
+2023-09-28 19:51:01,009 DEBUG : Found tablespace event ([None]) in DB
+2023-09-28 19:51:01,009 DEBUG : Found tablespace hs1 ([None]) in DB
+2023-09-28 19:51:01,009 DEBUG : Found tablespace hs2 ([None]) in DB
+2023-09-28 19:51:01,009 DEBUG : Found tablespace hs3 ([None]) in DB
+2023-09-28 19:51:01,009 DEBUG : Found tablespace hs4 (['CREATE']) in DB
+2023-09-28 19:51:01,009 DEBUG : Found tablespace hs4 (['CREATE']) in DB
+2023-09-28 19:51:01,010 DEBUG : Found tablespace pg_default ([None]) in DB
+2023-09-28 19:51:01,010 DEBUG : Found tablespace pg_global ([None]) in DB
+2023-09-28 19:51:01,010 DEBUG : Found tablespace task ([None]) in DB
+2023-09-28 19:51:01,010 DEBUG : Processing queries...
+2023-09-28 19:51:01,010 DEBUG : Number of queries for shared objects: 0
+2023-09-28 19:51:01,010 DEBUG : Number of queries for db objects: 8
+2023-09-28 19:51:01,010 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,010 DEBUG : Found connection in pool
+2023-09-28 19:51:01,011 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,011 DEBUG : Found connection in pool
+2023-09-28 19:51:01,029 DEBUG : COMMIT on all pooled database...
+2023-09-28 19:51:01,029 DEBUG : COMMIT on all pooled database - VCDB...
+2023-09-28 19:51:01,243 DEBUG : Acquiring lock /storage/db/vpostgres/postgresql.conf.upgradeLock
+2023-09-28 19:51:01,244 DEBUG : Backuping hba_file (/storage/db/vpostgres/pg_hba.conf) in /storage/db/vpostgres/pg_hba.conf.backup
+2023-09-28 19:51:01,289 DEBUG : Backuping ident_file (/storage/db/vpostgres/pg_ident.conf) in /storage/db/vpostgres/pg_ident.conf.backup
+2023-09-28 19:51:01,321 DEBUG : Working on hba_file
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role vstatsuser
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role archiver
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role lookupsvc_sync_db
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role vpxd_svcs_tagging
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role vpxd_svcs_kv_store
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role vpxd_svcs_computepolicy
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role vpxd
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role observability
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role trustmanagement_sync_db
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role certmgr_syncaas
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role certmgr_subscription
+2023-09-28 19:51:01,322 DEBUG : Keeping extra hba entries for role fcduser
+2023-09-28 19:51:01,323 DEBUG : Keeping extra hba entries for role all
+2023-09-28 19:51:01,323 DEBUG : Adding hba entries for missing role hdcsuser
+2023-09-28 19:51:01,323 DEBUG : Adding hba entries for missing role wcpuser
+2023-09-28 19:51:01,323 DEBUG : Overwriting /storage/db/vpostgres/pg_hba.conf...
+2023-09-28 19:51:01,359 DEBUG : Working on ident_file
+2023-09-28 19:51:01,359 DEBUG : Keeping extra ident entries for role archiver
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role certmgr_subscription
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role certmgr_syncaas
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role fcduser
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role lookupsvc_sync_db
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role trustmanagement_sync_db
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role vpxd
+2023-09-28 19:51:01,360 DEBUG : Keeping extra ident entries for role vpxd_svcs_computepolicy
+2023-09-28 19:51:01,361 DEBUG : Keeping extra ident entries for role vpxd_svcs_kv_store
+2023-09-28 19:51:01,361 DEBUG : Keeping extra ident entries for role vpxd_svcs_tagging
+2023-09-28 19:51:01,361 DEBUG : Keeping extra ident entries for role vstatsuser
+2023-09-28 19:51:01,361 DEBUG : Adding ident entries for missing role hdcsuser
+2023-09-28 19:51:01,361 DEBUG : Adding ident entries for missing role wcpuser
+2023-09-28 19:51:01,361 DEBUG : Overwriting /storage/db/vpostgres/pg_ident.conf...
+2023-09-28 19:51:01,393 DEBUG : Reloading postgres configuration
+2023-09-28 19:51:01,394 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,394 DEBUG : Found connection in pool
+2023-09-28 19:51:01,397 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,397 DEBUG : Found connection in pool
+2023-09-28 19:51:01,398 DEBUG : Removing Backup of hba_file in /storage/db/vpostgres/pg_hba.conf.backup
+2023-09-28 19:51:01,402 DEBUG : Removing Backup of ident_file in /storage/db/vpostgres/pg_ident.conf.backup
+2023-09-28 19:51:01,424 DEBUG : Releasing lock /storage/db/vpostgres/postgresql.conf.upgradeLock
+2023-09-28 19:51:01,425 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,425 DEBUG : Found connection in pool
+2023-09-28 19:51:01,428 DEBUG : Getting connection on database VCDB
+2023-09-28 19:51:01,428 DEBUG : Found connection in pool
+2023-09-28 19:51:01,429 DEBUG : Checking if /etc/vmware/service-registry/wcp-sub-registry.yaml is cacheable
+2023-09-28 19:51:01,429 DEBUG : '/etc/vmware/service-registry/wcp-sub-registry.yaml' is cacheable
+2023-09-28 19:51:01,429 DEBUG : Updating cache.
+Files:
+{'/etc/vmware/service-registry/wcp-sub-registry.yaml'}
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-09-28 19:51:01,429 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-28 19:51:01,430 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: 7f16dac0d8802da24c104a2f9dead42688bdd529
+2023-09-28 19:51:01,445 DEBUG : Shutting down the pool...
+
+2023-09-28 19:51:01,528 root INFO - Successfully granted permissions over VCDB table for wcp/hdcs role
+2023-09-28 19:51:01,528 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-09-28 19:51:01,528 root INFO - Going to create vCLSAdmin SSO Group
+2023-09-28 19:51:01,664 root INFO - vCLSAdmin SSO Group already exists
+2023-09-28 20:12:28,656 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-09-28 20:12:28,736 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-09-28 20:12:41,264 root INFO - Configuring VCDB for ['wcp', 'hdcs']
+2023-09-28 20:12:42,907 root INFO - Create wcp schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/wcp_db_init.sql -v ON_ERROR_STOP=1
+2023-09-28 20:12:43,874 root INFO - Create hdcs schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/hdcs_db_init.sql -v ON_ERROR_STOP=1
+2023-09-28 20:12:44,582 root INFO - Configuring DB Peer Auth for WCP/HDCS Service
+2023-09-28 20:12:52,602 root DEBUG - Returned stdout : , stderr: 2023-09-28 20:12:51,752 DEBUG : Initializing cache
+2023-09-28 20:12:51,752 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-09-28 20:12:51,753 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-09-28 20:12:51,753 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-28 20:12:51,803 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: 7f16dac0d8802da24c104a2f9dead42688bdd529
+2023-09-28 20:12:51,804 DEBUG : All stages for all files cached
+
+2023-09-28 20:12:52,603 root INFO - Successfully granted permissions over VCDB table for wcp/hdcs role
+2023-09-28 20:12:52,603 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-09-28 20:12:52,603 root INFO - Going to create vCLSAdmin SSO Group
+2023-09-28 20:12:52,889 root INFO - vCLSAdmin SSO Group already exists
+2023-09-29 12:58:07,305 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-09-29 12:58:07,605 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-09-29 12:58:14,899 root INFO - Configuring VCDB for ['wcp', 'hdcs']
+2023-09-29 12:58:16,230 root INFO - Create wcp schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/wcp_db_init.sql -v ON_ERROR_STOP=1
+2023-09-29 12:58:16,863 root INFO - Create hdcs schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/hdcs_db_init.sql -v ON_ERROR_STOP=1
+2023-09-29 12:58:17,796 root INFO - Configuring DB Peer Auth for WCP/HDCS Service
+2023-09-29 12:58:23,352 root DEBUG - Returned stdout : , stderr: 2023-09-29 12:58:22,973 DEBUG : Initializing cache
+2023-09-29 12:58:22,973 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-09-29 12:58:22,974 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-09-29 12:58:22,974 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-09-29 12:58:23,027 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: 7f16dac0d8802da24c104a2f9dead42688bdd529
+2023-09-29 12:58:23,027 DEBUG : All stages for all files cached
+
+2023-09-29 12:58:23,352 root INFO - Successfully granted permissions over VCDB table for wcp/hdcs role
+2023-09-29 12:58:23,353 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-09-29 12:58:23,353 root INFO - Going to create vCLSAdmin SSO Group
+2023-09-29 12:58:23,798 root INFO - vCLSAdmin SSO Group already exists
+2023-11-15 10:01:13,833 root INFO - Downloading cert from URL: http://localhost:7080/idm/tenant/vsphere.local/certificates?scope=TENANT
+2023-11-15 10:01:13,991 root INFO - Saved issuer certificate in /var/vmware/wcp/certs/sts-trusted.json
+2023-11-15 10:01:23,970 root INFO - Configuring VCDB for ['wcp', 'hdcs']
+2023-11-15 10:01:25,071 root INFO - Create wcp schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/wcp_db_init.sql -v ON_ERROR_STOP=1
+2023-11-15 10:01:25,881 root INFO - Create hdcs schema if it does not exist with command: /opt/vmware/vpostgres/current/bin/psql -U postgres -d VCDB -f /usr/lib/vmware-wcp/hdcs_db_init.sql -v ON_ERROR_STOP=1
+2023-11-15 10:01:26,136 root INFO - Configuring DB Peer Auth for WCP/HDCS Service
+2023-11-15 10:01:32,908 root DEBUG - Returned stdout : , stderr: 2023-11-15 10:01:32,441 DEBUG : Initializing cache
+2023-11-15 10:01:32,442 DEBUG : Cache found in /var/cache/vsr/dbms/vpg_sync_registry_cache.json, loading
+2023-11-15 10:01:32,442 DEBUG : Checking in cache if work is needed.
+Files:
+['/etc/vmware/service-registry/wcp-sub-registry.yaml']
+Stages:
+['revoke_role', 'drop_role', 'create_role', 'alter_role', 'grant_role', 'grant_role', 'grant_obj', 'owner_obj']
+2023-11-15 10:01:32,442 DEBUG : Computing hash for /etc/vmware/service-registry/wcp-sub-registry.yaml
+2023-11-15 10:01:32,516 DEBUG : Hash for /etc/vmware/service-registry/wcp-sub-registry.yaml: 7f16dac0d8802da24c104a2f9dead42688bdd529
+2023-11-15 10:01:32,516 DEBUG : All stages for all files cached
+
+2023-11-15 10:01:32,908 root INFO - Successfully granted permissions over VCDB table for wcp/hdcs role
+2023-11-15 10:01:32,909 root INFO - Invoking vCLSAdmin SSO Group creation
+2023-11-15 10:01:32,909 root INFO - Going to create vCLSAdmin SSO Group
+2023-11-15 10:01:33,812 root INFO - vCLSAdmin SSO Group already exists
